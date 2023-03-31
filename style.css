@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Lato:wght@400;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    color: #24305f;
+}
+
+body{
+    background: #fffdfb;
+}
+
+.accordion{
+    width: 50%;
+    margin: 10rem auto 0 auto;
+}
+
+.item{
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+}
+
+h2{
+    font-size: 1.9rem;
+}
+
+.number{
+    font-size: 2rem;
+}
+
+.icon{
+    font-size: 2rem;
+    color: #1864ab;
+}
+
+.hiddenBox{
+    grid-column: 2/3;
+    display: none;
+}
+.hiddenBox p{ 
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+.hiddenBox ul li{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.active .hiddenBox{
+    display: block;
+}
+
+.item{
+    margin-bottom: 2rem;
+}
+
+.active{
+    position: relative;
+}
+
+.active::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 3px solid #1864ab;
+    animation: borderline 1s linear;
+}
+
+@keyframes borderline{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
